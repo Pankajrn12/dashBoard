@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    /* Custom CSS styles */
+    body {
+      padding-top: 70px;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+  <title>ShowDetails</title>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">BlackCoffer</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="showDashboard">Show Details</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- User Details Table -->
+<div class="container mt-8">
+  <h2>User Details</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>End Year</th>
+      <th>Intensity</th>
+      <th>Sector</th>
+      <th>Topics</th>
+      <th>Insight</th>
+      <th>URL</th>
+      <th>Start Year</th>
+      <th>Added Date</th>
+      <th>Published Date</th>
+      <th>Source</th>
+      <th>Title</th>
+      <th>Likelihood</th>
+      <th>Country</th>
+      <th>City</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${getDetails}">
+      <td th:text="${product.endYear}"></td>
+      <td th:text="${product.intensity}"></td>
+      <td th:text="${product.sector}"></td>
+      <td th:text="${product.topic}"></td>
+      <td th:text="${product.insight}"></td>
+      <td th:text="${product.url}"></td>
+      <td th:text="${product.startYear}"></td>
+      <td th:text="${product.added}"></td>
+      <td th:text="${product.published}"></td>
+      <td th:text="${product.source}"></td>
+      <td th:text="${product.title}"></td>
+      <td th:text="${product.likelihood}"></td>
+      <td th:text="${product.country}"></td>
+      <td th:text="${product.city}"></td>
+
+    </tr>
+    <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-muted">This is the footer section.</span>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

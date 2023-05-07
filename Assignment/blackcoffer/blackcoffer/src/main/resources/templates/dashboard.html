@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    /* Custom CSS styles */
+    body {
+      padding-top: 70px;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+  <title>User Details</title>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">BlackCoffer</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="showDashboard">Show Details</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- User Details Table -->
+<div class="container mt-5">
+  <h1 class="header1">User Details Dashboard</h1>
+
+  <form  th:action="@{save-User}" method="POST">
+    <div class="form-group">
+      <label for="end-year">End Year:</label>
+      <select class="form-control" id="end-year" name="endYear">
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+      </select>
+      <!-- <input type="text" class="form-control" id="name" placeholder="Enter name"> -->
+    </div>
+    <div class="form-group">
+      <label for="intensity">Intensity:</label>
+      <input type="text" class="form-control" id="intensity" placeholder="Enter Intensity" name="intensity">
+    </div>
+    <div class="form-group">
+      <label for="sector">Sector:</label>
+      <select class="form-control" id="sector" name="sector">
+        <option>Information Technology</option>
+        <option>Pharmaceuticals</option>
+        <option>Healthcare</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="region">Region:</label>
+      <select class="form-control" id="region" name="region">
+        <option>World</option>
+        <option>Northern America</option>
+        <option>Asia</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="topic">topics:</label>
+      <select class="form-control" id="topic" name="topic">
+        <option>artificial intelligence</option>
+        <option>pharmaceutical</option>
+        <option>drug</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="insight">Insight:</label>
+      <input type="text" class="form-control" id="insight" placeholder="Enter Insight" name="insight">
+    </div>
+
+    <div class="form-group">
+      <label for="url">URL:</label>
+      <input type="text" class="form-control" id="url" placeholder="Enter URL" name="url">
+    </div>
+
+    <div class="form-group">
+      <label for="start-year">Start Year:</label>
+      <input type="text" class="form-control" id="start-year" placeholder="Enter Start Year" name="startYear">
+    </div>
+
+    <div class="form-group">
+      <label for="Added">Added:</label>
+      <input type="text" class="form-control" id="Added" placeholder="Enter Added Date" name="added">
+    </div>
+    <div class="form-group">
+      <label for="published">Published:</label>
+      <input type="text" class="form-control" id="published" placeholder="Enter Published" name="published">
+    </div>
+
+
+    <div class="form-group">
+      <label for="source">Source:</label>
+      <select class="form-control" id="source" name="source">
+        <option>infosysblogs</option>
+        <option>Statista Infographics</option>
+        <option>Cybersecurity Trend</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" class="form-control" id="title" placeholder="Enter Title" name="title">
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <select class="form-control" id="country" name="country">
+        <option>India</option>
+        <option>America</option>
+        <option>South America</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="city">City:</label>
+      <select class="form-control" id="city" name="city">
+        <option>Singapur</option>
+        <option>Delhi</option>
+        <option>Washington</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="likelihood">Likelihood:</label>
+      <input type="text" class="form-control" id="likelihood" placeholder="Enter Likelihood" name="likelihood">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-muted">This is the footer section.</span>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
